@@ -6,6 +6,7 @@ import org.junit.Test;
 public class DivideTest {
 
 	private Divider divider;
+	private static final double DELTA = 1e-15;
 	
 	@Test
 	public void test() {
@@ -13,7 +14,9 @@ public class DivideTest {
 		double expectedValue = 10;
 		double actualValue = divider.divide(20,2);
 		
-		Assert.assertEquals(expectedValue, actualValue);
+		Assert.assertEquals(expectedValue, actualValue, DELTA);
+
+
 	}
 
 }
